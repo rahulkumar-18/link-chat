@@ -9,7 +9,6 @@ import ChatLayout from '@/components/ChatLayout';
 import { Send, Globe, Trash2, Bot, User, Loader2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Link from 'next/link';
 
 interface Message {
   id: string;
@@ -276,7 +275,7 @@ export default function ChatBot() {
                       remarkPlugins={[remarkGfm]}
                       components={{
                         a: ({ node, ...props }) => (
-                          <Link {...props} target="_blank" rel="noopener noreferrer" />
+                          <a {...props} target="_blank" rel="noopener noreferrer" />
                         ),
                       }}
                     >
