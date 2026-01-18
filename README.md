@@ -1,4 +1,4 @@
-# Link Chat - AI-Powered Link Q&A Chatbot
+# Query Chat - AI-Powered Link Q&A Chatbot
 
 A Next.js chatbot application that allows users to input a link URL and ask questions about its content. Built with shadcn/ui for a beautiful, accessible interface.
 

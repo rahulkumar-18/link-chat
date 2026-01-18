@@ -9,6 +9,7 @@ import ChatLayout from '@/components/ChatLayout';
 import { Send, Globe, Trash2, Bot, User, Loader2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Link from 'next/link';
 
 interface Message {
   id: string;
@@ -167,7 +168,7 @@ export default function ChatBot() {
         <div className="bg-primary/20 flex h-8 w-8 items-center justify-center rounded-lg backdrop-blur-md">
           <Globe className="text-primary h-5 w-5" />
         </div>
-        <h1 className="text-xl font-bold tracking-tight text-white">Link Chat</h1>
+        <h1 className="text-xl font-bold tracking-tight text-white">Query Chat</h1>
       </div>
 
       <div className="flex flex-1 flex-col gap-4">
@@ -275,7 +276,7 @@ export default function ChatBot() {
                       remarkPlugins={[remarkGfm]}
                       components={{
                         a: ({ node, ...props }) => (
-                          <a {...props} target="_blank" rel="noopener noreferrer" />
+                          <Link {...props} target="_blank" rel="noopener noreferrer" />
                         ),
                       }}
                     >
@@ -320,7 +321,7 @@ export default function ChatBot() {
             </div>
           </form>
           <div className="mt-2 text-center text-xs text-muted-foreground/30">
-            Powered by Gemini • Link Chat
+            Powered by Gemini API • Query Chat
           </div>
         </div>
       </div>
